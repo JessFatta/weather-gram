@@ -1,33 +1,52 @@
 import React, { Component } from 'react';
 //import { Route, Switch } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import Nav from '../Nav/Nav'
 import SearchBar from '../SearchBar/SearchBar';
+import Card from "../Card/Card";
 import { getWeatherData } from '../apiCalls'
 
 type AppState = {
-  weather: {}
+    location: string,
+    current: {
+      temp_f: null,
+      feelslike_f: null,
+      condition: {text: string, icon: string},
+      humidity: null,
+      wind_mph: null,
+      uv: null
+    }
 }
 
 
 class App extends Component <{}, AppState> {
     state: AppState = {
-      weather: {}
+        location: "",
+        current: {
+          temp_f: null,
+          feelslike_f: null,
+          condition: {text: "", icon: ""},
+          humidity: null,
+          wind_mph: null,
+          uv: null
+        }
     }
 
-
   setLocation = (location: string) => {
-    console.log('heyyyy')
     getWeatherData(location)
-    .then(data => this.setState({weather: data}))
-    .then(() => console.log(this.state.weather))
+    .then(data => this.setState({ location: data.location.name, current: data.current }))
+
+    .then(() => console.log("THISSTATECURRE", this.state.current))
   }
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Nav setLocation={this.setLocation}/>
+        <Card
+          location={this.state.location}
+          current={this.state.current}
+        />
       </div>
     )
   }
