@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 //import { Route, Switch } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import Nav from '../Nav/Nav'
 import SearchBar from '../SearchBar/SearchBar';
@@ -42,7 +41,7 @@ class App extends Component <{}, AppState> {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Nav setLocation={this.setLocation}/>
         <Card
           location={this.state.location}
