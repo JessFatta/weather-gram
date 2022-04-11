@@ -5,8 +5,12 @@ type SearchBarState = {
   location: string
 }
 
+type Props = {
+  setLocation: Function
+}
 
-class SearchBar extends Component <{}, SearchBarState> {
+
+class SearchBar extends Component <Props, SearchBarState> {
     state: SearchBarState = {
       location: ''
   }
@@ -17,6 +21,9 @@ class SearchBar extends Component <{}, SearchBarState> {
 
   submitLocation = (event: MouseEvent) => {
     event.preventDefault()
+    console.log('yoooooo')
+    this.props.setLocation(this.state.location)
+    this.clearSearchBar()
   }
 
   clearSearchBar = () => {
@@ -34,7 +41,7 @@ class SearchBar extends Component <{}, SearchBarState> {
           value={this.state.location} 
           onChange={(event) => this.handleChange(event)}
           />
-          <button onClick={(event) => this.submitLocation}>Let's go!</button>
+          <button onClick={(event) => this.submitLocation(event)}>Let's go!</button>
       </div>
     )
   }
