@@ -4,7 +4,7 @@ import './App.css';
 import Nav from '../Nav/Nav'
 import SearchBar from '../SearchBar/SearchBar';
 import Card from "../Card/Card";
-import { getWeatherData } from '../apiCalls'
+import { getCurrentData } from '../apiCalls'
 
 type AppState = {
     location: string,
@@ -33,7 +33,7 @@ class App extends Component <{}, AppState> {
     }
 
   setLocation = (location: string) => {
-    getWeatherData(location)
+    getCurrentData(location)
     .then(data => this.setState({ location: data.location.name, current: data.current }))
 
     .then(() => console.log("THISSTATECURRE", this.state.current))
