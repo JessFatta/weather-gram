@@ -1,4 +1,5 @@
-import React, { Component, MouseEvent } from 'react'
+import React, { Component, MouseEvent } from 'react';
+import './SearchBar.css';
 //import { NavLink } from 'react-router-dom';
 
 type SearchBarState = {
@@ -38,7 +39,7 @@ class SearchBar extends Component <Props, SearchBarState> {
           type='text'
           name='search-bar'
           placeholder='Enter Location'
-          value={this.state.location} 
+          value={this.state.location}
           onChange={(event) => this.handleChange(event)}
           />
           <button onClick={(event) => this.submitLocation(event)}>Let's go!</button>
