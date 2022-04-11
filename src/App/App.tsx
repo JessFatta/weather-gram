@@ -10,7 +10,8 @@ import { getWeatherData } from '../apiCalls'
 type AppState = {
     location: string,
     current: {
-      temp_f: null
+      temp_f: null,
+      condition: {text: string, icon: string}
     }
 }
 
@@ -19,7 +20,9 @@ class App extends Component <{}, AppState> {
     state: AppState = {
         location: "",
         current: {
-          temp_f: null
+          temp_f: null,
+          condition: {text: "", icon: ""}
+
         }
     }
 
