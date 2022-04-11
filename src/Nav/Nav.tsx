@@ -3,11 +3,22 @@ import React from 'react'
 import './Nav.css'
 import SearchBar from '../SearchBar/SearchBar'
 
-const Nav: React.FC = () => {
+type NavProps = {
+  setLocation: Function
+}
+
+const Nav: React.FC <NavProps> = ({setLocation}) => {
   return (
-    <header className='nav-container'>
-      <SearchBar />
-    </header>
+    <nav className='nav-container'>
+      <h1 className='title'>Weather Gram</h1>
+      <SearchBar setLocation={setLocation}/>
+      <section className='buttons-container'>
+        <button>current</button>
+        <button>3 day</button>
+        <button>7 day</button>
+        <button>random</button>
+      </section>
+    </nav>
   )
 }
 
