@@ -11,7 +11,11 @@ type AppState = {
     location: string,
     current: {
       temp_f: null,
-      condition: {text: string, icon: string}
+      feelslike_f: null,
+      condition: {text: string, icon: string},
+      humidity: null,
+      wind_mph: null,
+      uv: null
     }
 }
 
@@ -21,8 +25,11 @@ class App extends Component <{}, AppState> {
         location: "",
         current: {
           temp_f: null,
-          condition: {text: "", icon: ""}
-
+          feelslike_f: null,
+          condition: {text: "", icon: ""},
+          humidity: null,
+          wind_mph: null,
+          uv: null
         }
     }
 
