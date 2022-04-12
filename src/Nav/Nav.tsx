@@ -5,9 +5,10 @@ import SearchBar from '../SearchBar/SearchBar'
 
 type NavProps = {
   setLocation: Function
+  getRandomCity: Function
 }
 
-const Nav: React.FC <NavProps> = ({setLocation}) => {
+const Nav: React.FC <NavProps> = ({setLocation, getRandomCity}) => {
   return (
     <nav className='nav-container'>
       <h1 className='title'>Weather Gram</h1>
@@ -15,7 +16,7 @@ const Nav: React.FC <NavProps> = ({setLocation}) => {
       <section className='buttons-container'>
         <button><NavLink to="/">home </NavLink></button>
         <button><NavLink to="/3Day">3 day </NavLink></button>
-        <button>random</button>
+        <button onClick={() => getRandomCity()}>random</button>
       </section>
     </nav>
   )
