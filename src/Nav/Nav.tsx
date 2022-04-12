@@ -1,5 +1,5 @@
 import React from 'react'
-//import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Nav.css'
 import SearchBar from '../SearchBar/SearchBar'
 
@@ -14,7 +14,7 @@ const Nav: React.FC <NavProps> = ({setLocation}) => {
       <SearchBar setLocation={setLocation}/>
       <section className='buttons-container'>
         <button>current</button>
-        <button>3 day</button>
+        <NavLink to="/3Day">3 day </NavLink>
         <button>7 day</button>
         <button>random</button>
       </section>
@@ -24,4 +24,4 @@ const Nav: React.FC <NavProps> = ({setLocation}) => {
 
 
 
-export default Nav 
+export default Nav
