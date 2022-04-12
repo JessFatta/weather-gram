@@ -24,6 +24,9 @@ const Card: React.FC <CardProps> =({location, current}) => {
       <p>Humidity: {current.humidity} %</p>
       <p>Wind: {current.wind_mph} mph</p>
       <p>UV Index: {current.uv}</p>
+      <div className='favorite-button'>
+        <button>Favorite</button>
+      </div>
     </div>
   )
 }
