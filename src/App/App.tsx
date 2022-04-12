@@ -6,6 +6,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import ThreeDay from '../3Day/3Day';
 import Card from "../Card/Card";
 import { getCurrentData } from '../apiCalls'
+import cityNames from '../Random/RandomCityData.js'
 
 type AppState = {
     location: string,
@@ -36,6 +37,10 @@ class App extends Component <{}, AppState> {
   setLocation = (location: string) => {
     getCurrentData(location)
     .then(data => this.setState({ location: data.location.name, current: data.current }))
+  }
+
+  getRandomCity = () => {
+
   }
 
   render() {
