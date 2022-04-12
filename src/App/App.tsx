@@ -4,6 +4,7 @@ import './App.css';
 import Nav from '../Nav/Nav'
 import SearchBar from '../SearchBar/SearchBar';
 import ThreeDay from '../3Day/3Day';
+import SevenDay from '../7Day/7Day';
 import Card from "../Card/Card";
 import { getCurrentData } from '../apiCalls'
 
@@ -36,21 +37,24 @@ class App extends Component <{}, AppState> {
   setLocation = (location: string) => {
     getCurrentData(location)
     .then(data => this.setState({ location: data.location.name, current: data.current }))
-
-    .then(() => console.log("THISSTATECURRE", this.state.current))
   }
 
   render() {
     return (
-
       <div className="App">
         <Nav setLocation={this.setLocation}/>
-        <Card
+        <Route exact path="/" render={() => {
+          return <Card
           location={this.state.location}
           current={this.state.current}
         />
+        }} />
         <Route path="/3Day" render={() => {
           return <ThreeDay location={this.state.location}/>
+        }}
+        />
+        <Route path="/7Day" render={() => {
+          return <SevenDay location={this.state.location}/>
         }}
         />
       </div>
