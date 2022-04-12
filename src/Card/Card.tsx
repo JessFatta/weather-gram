@@ -10,10 +10,11 @@ type CardProps = {
     humidity: number,
     wind_mph: number,
     uv: number
-  }
+  },
+  saveFavoriteLocation: Function
 }
 
-const Card: React.FC <CardProps> =({location, current}) => {
+const Card: React.FC <CardProps> =({location, current, saveFavoriteLocation}) => {
   return (
     <div className="card">
     <img src={current.condition.icon} alt={current.condition.text}/>
@@ -25,7 +26,7 @@ const Card: React.FC <CardProps> =({location, current}) => {
       <p>Wind: {current.wind_mph} mph</p>
       <p>UV Index: {current.uv}</p>
       <div className='favorite-button'>
-        <button>Favorite</button>
+        <button onClick={() => saveFavoriteLocation()}>Favorite</button>
       </div>
     </div>
   )
