@@ -12,10 +12,10 @@ type ThreeDayState = {
       {
         date: string,
         day: {
-          maxtemp_f: null,
-          mintemp_f: null,
-          avghumidity: null,
-          daily_chance_of_rain: null,
+          maxtemp_f: number,
+          mintemp_f: number,
+          avghumidity: number,
+          daily_chance_of_rain: number,
           condition: {
             text: string,
             icon: string
@@ -33,10 +33,10 @@ class ThreeDay extends Component <ThreeDayProps, ThreeDayState> {
           {
             date: "",
             day: {
-              maxtemp_f: null,
-              mintemp_f: null,
-              avghumidity: null,
-              daily_chance_of_rain: null,
+              maxtemp_f: 0,
+              mintemp_f: 0,
+              avghumidity: 0,
+              daily_chance_of_rain: 0,
               condition: {
                 text: "",
                 icon: ""
@@ -61,6 +61,11 @@ class ThreeDay extends Component <ThreeDayProps, ThreeDayState> {
         location={this.props.location}
         maxtemp_f={day.day.maxtemp_f}
         mintemp_f={day.day.mintemp_f}
+        date={day.date}
+        icon={day.day.condition.icon}
+        text={day.day.condition.text}
+        avghumidity={day.day.avghumidity}
+        daily_chance_of_rain={day.day.daily_chance_of_rain}
         />
         </div>
       )
