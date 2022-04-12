@@ -15,7 +15,6 @@ const Nav: React.FC <NavProps> = ({setLocation}) => {
       <section className='buttons-container'>
         <button><NavLink to="/">home </NavLink></button>
         <button><NavLink to="/3Day">3 day </NavLink></button>
-        <button><NavLink to="/7Day">7 day </NavLink></button>
         <button>random</button>
       </section>
     </nav>
