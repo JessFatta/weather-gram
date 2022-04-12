@@ -4,12 +4,12 @@ import './Card.css'
 type CardProps = {
   location: string,
   current: {
-    temp_f: null,
-    feelslike_f: null,
+    temp_f: number,
+    feelslike_f: number,
     condition: {text: string, icon: string},
-    humidity: null,
-    wind_mph: null,
-    uv: null
+    humidity: number,
+    wind_mph: number,
+    uv: number
   }
 }
 
