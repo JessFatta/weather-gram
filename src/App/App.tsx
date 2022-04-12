@@ -34,6 +34,10 @@ class App extends Component <{}, AppState> {
         }
     }
 
+  componentDidMount = () => {
+    this.getRandomCity()
+  }
+
   setLocation = (location: string) => {
     getCurrentData(location)
     .then(data => this.setState({ location: data.location.name, current: data.current }))
@@ -44,7 +48,6 @@ class App extends Component <{}, AppState> {
   }
 
   getRandomCity = () => {
-    console.log('hi')
     let cityIndex = this.getRandomIndex(cityNames)
     getCurrentData(cityNames[cityIndex])
     .then(data => this.setState({ location: data.location.name, current: data.current }))
