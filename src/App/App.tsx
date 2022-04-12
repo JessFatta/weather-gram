@@ -10,12 +10,12 @@ import { getCurrentData } from '../apiCalls'
 type AppState = {
     location: string,
     current: {
-      temp_f: null,
-      feelslike_f: null,
+      temp_f: number,
+      feelslike_f: number,
       condition: {text: string, icon: string},
-      humidity: null,
-      wind_mph: null,
-      uv: null
+      humidity: number,
+      wind_mph: number,
+      uv: number
     }
 }
 
@@ -24,12 +24,12 @@ class App extends Component <{}, AppState> {
     state: AppState = {
         location: "",
         current: {
-          temp_f: null,
-          feelslike_f: null,
+          temp_f: 0,
+          feelslike_f: 0,
           condition: {text: "", icon: ""},
-          humidity: null,
-          wind_mph: null,
-          uv: null
+          humidity: 0,
+          wind_mph: 0,
+          uv: 0
         }
     }
 
@@ -42,7 +42,7 @@ class App extends Component <{}, AppState> {
 
   render() {
     return (
-      
+
       <div className="App">
         <Nav setLocation={this.setLocation}/>
         <Card
