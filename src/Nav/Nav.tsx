@@ -13,9 +13,9 @@ const Nav: React.FC <NavProps> = ({setLocation}) => {
       <h1 className='title'>Weather Gram</h1>
       <SearchBar setLocation={setLocation}/>
       <section className='buttons-container'>
-        <button>current</button>
-        <NavLink to="/3Day">3 day </NavLink>
-        <button>7 day</button>
+        <button><NavLink to="/">home </NavLink></button>
+        <button><NavLink to="/3Day">3 day </NavLink></button>
+        <button><NavLink to="/7Day">7 day </NavLink></button>
         <button>random</button>
       </section>
     </nav>
