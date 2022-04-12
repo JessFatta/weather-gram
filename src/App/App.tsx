@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-//import { Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Nav from '../Nav/Nav'
 import SearchBar from '../SearchBar/SearchBar';
+import ThreeDay from '../3Day/3Day';
 import Card from "../Card/Card";
 import { getCurrentData } from '../apiCalls'
 
@@ -41,11 +42,16 @@ class App extends Component <{}, AppState> {
 
   render() {
     return (
+      
       <div className="App">
         <Nav setLocation={this.setLocation}/>
         <Card
           location={this.state.location}
           current={this.state.current}
+        />
+        <Route path="/3Day" render={() => {
+          return <ThreeDay location={this.state.location}/>
+        }}
         />
       </div>
     )
