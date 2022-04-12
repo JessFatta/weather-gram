@@ -4,7 +4,6 @@ import './App.css';
 import Nav from '../Nav/Nav'
 import SearchBar from '../SearchBar/SearchBar';
 import ThreeDay from '../3Day/3Day';
-import SevenDay from '../7Day/7Day';
 import Card from "../Card/Card";
 import { getCurrentData } from '../apiCalls'
 
@@ -51,10 +50,6 @@ class App extends Component <{}, AppState> {
         }} />
         <Route path="/3Day" render={() => {
           return <ThreeDay location={this.state.location}/>
-        }}
-        />
-        <Route path="/7Day" render={() => {
-          return <SevenDay location={this.state.location}/>
         }}
         />
       </div>
