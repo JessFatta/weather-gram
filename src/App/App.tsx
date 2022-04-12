@@ -17,7 +17,8 @@ type AppState = {
       humidity: number,
       wind_mph: number,
       uv: number
-    }
+    },
+    favorites: Array<string>
 }
 
 
@@ -31,11 +32,17 @@ class App extends Component <{}, AppState> {
           humidity: 0,
           wind_mph: 0,
           uv: 0
-        }
+        },
+        favorites: []
     }
 
   componentDidMount = () => {
     this.getRandomCity()
+  }
+
+  saveFavoriteLocation = () => {
+    console.log('hi')
+    this.setState({favorites: [...this.state.favorites, this.state.location]})
   }
 
   setLocation = (location: string) => {
@@ -43,7 +50,7 @@ class App extends Component <{}, AppState> {
     .then(data => this.setState({ location: data.location.name, current: data.current }))
   }
 
-  getRandomIndex = (array: any) => {
+  getRandomIndex = (array: Array<string>) => {
     return Math.floor(Math.random() * array.length)
   }
 
@@ -64,6 +71,7 @@ class App extends Component <{}, AppState> {
           return <Card
           location={this.state.location}
           current={this.state.current}
+          saveFavoriteLocation={this.saveFavoriteLocation}
         />
         }} />
         <Route path="/3Day" render={() => {
