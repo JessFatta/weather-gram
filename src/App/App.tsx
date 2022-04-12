@@ -39,14 +39,24 @@ class App extends Component <{}, AppState> {
     .then(data => this.setState({ location: data.location.name, current: data.current }))
   }
 
-  getRandomCity = () => {
+  getRandomIndex = (array: any) => {
+    return Math.floor(Math.random() * array.length)
+  }
 
+  getRandomCity = () => {
+    console.log('hi')
+    let cityIndex = this.getRandomIndex(cityNames)
+    getCurrentData(cityNames[cityIndex])
+    .then(data => this.setState({ location: data.location.name, current: data.current }))
   }
 
   render() {
     return (
       <div className="App">
-        <Nav setLocation={this.setLocation}/>
+        <Nav
+          setLocation={this.setLocation}
+          getRandomCity={this.getRandomCity}
+          />
         <Route exact path="/" render={() => {
           return <Card
           location={this.state.location}
