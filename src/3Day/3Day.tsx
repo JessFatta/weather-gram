@@ -66,6 +66,7 @@ class ThreeDay extends Component <ThreeDayProps, ThreeDayState> {
         text={day.day.condition.text}
         avghumidity={day.day.avghumidity}
         daily_chance_of_rain={day.day.daily_chance_of_rain}
+        key={Date.now()}
         />
         </div>
       )
