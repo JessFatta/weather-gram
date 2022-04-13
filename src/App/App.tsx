@@ -5,25 +5,14 @@ import Nav from '../Nav/Nav'
 import SearchBar from '../SearchBar/SearchBar';
 import ThreeDay from '../3Day/3Day';
 import Card from "../Card/Card";
-import { getCurrentData } from '../apiCalls'
-import cityNames from '../Random/RandomCityData.js'
-
-type AppState = {
-    location: string,
-    current: {
-      temp_f: number,
-      feelslike_f: number,
-      condition: {text: string, icon: string},
-      humidity: number,
-      wind_mph: number,
-      uv: number
-    },
-    favorites: Array<string>
-}
+import Favorites from '../Favorites/Favorites';
+import { getCurrentData } from '../apiCalls';
+import cityNames from '../Random/RandomCityData.js';
 
 
-class App extends Component <{}, AppState> {
-    state: AppState = {
+
+class App extends Component  {
+    state = {
         location: "",
         current: {
           temp_f: 0,
@@ -40,9 +29,9 @@ class App extends Component <{}, AppState> {
     this.getRandomCity()
   }
 
-  saveFavoriteLocation = () => {
+  saveFavoriteLocation = (): void => {
     console.log('hi')
-    this.setState({favorites: [...this.state.favorites, this.state.location]})
+    this.setState({favorites: [...this.state.favorites, {location: this.state.location, current: this.state.current}]})
   }
 
   setLocation = (location: string) => {
@@ -78,6 +67,9 @@ class App extends Component <{}, AppState> {
           return <ThreeDay location={this.state.location}/>
         }}
         />
+        <Route path='/favorites' render={() => {
+          return <Favorites favorites={this.state.favorites}/>
+        }} />
       </div>
     )
   }
