@@ -1,9 +1,10 @@
 import React, { Component, MouseEvent } from 'react';
 import './SearchBar.css';
-//import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 type SearchBarState = {
-  location: string
+  location: string,
+  hasError: boolean
 }
 
 type Props = {
@@ -13,7 +14,8 @@ type Props = {
 
 class SearchBar extends Component <Props, SearchBarState> {
     state: SearchBarState = {
-      location: ''
+      location: '',
+      hasError: false
   }
 
   handleChange = (event: {target: {value: string}}) => {
@@ -22,8 +24,12 @@ class SearchBar extends Component <Props, SearchBarState> {
 
   submitLocation = (event: MouseEvent) => {
     event.preventDefault()
-    console.log('yoooooo')
     this.props.setLocation(this.state.location)
+    if(!this.state.location) {
+      this.setState({hasError: true})
+    } else {
+      this.setState({hasError: false})
+    }
     this.clearSearchBar()
   }
 
@@ -31,19 +37,26 @@ class SearchBar extends Component <Props, SearchBarState> {
     this.setState({location: ''})
   }
 
+
+
   render() {
     return (
-      <div className='search-bar-container'>
-        <input
-          className='search-bar'
-          type='text'
-          name='search-bar'
-          placeholder='Enter Location'
-          value={this.state.location}
-          onChange={(event) => this.handleChange(event)}
-          />
-          <button className='lets-go-button' onClick={(event) => this.submitLocation(event)}>Let's go!</button>
-      </div>
+      <div>
+        <div className='search-bar-container'>
+          <input
+            className='search-bar'
+            type='text'
+            name='search-bar'
+            placeholder='Enter Location'
+            value={this.state.location}
+            onChange={(event) => this.handleChange(event)}
+            />
+          <button className='lets-go-button' onClick={(event) => this.submitLocation(event)}><NavLink to="/">Let's Go!</NavLink></button>
+        </div>
+        <div>
+          {this.state.hasError && <p>Please enter a location</p>}
+        </div>
+      </div> 
     )
   }
 }
