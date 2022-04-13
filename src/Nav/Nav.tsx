@@ -1,12 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import { NavProps } from '../Interfaces';
 import './Nav.css'
 import SearchBar from '../SearchBar/SearchBar'
 
-type NavProps = {
-  setLocation: Function
-  getRandomCity: Function
-}
+
 
 const Nav: React.FC <NavProps> = ({setLocation, getRandomCity}) => {
   return (
@@ -16,6 +14,7 @@ const Nav: React.FC <NavProps> = ({setLocation, getRandomCity}) => {
       <section className='buttons-container'>
         <button><NavLink to="/">home </NavLink></button>
         <button><NavLink to="/3Day">3 day </NavLink></button>
+        <button><NavLink to='/favorites'>Saved Locations</NavLink></button>
         <button onClick={() => getRandomCity()}>random</button>
       </section>
     </nav>
