@@ -1,5 +1,17 @@
 .search-bar-container {
   display: flex;
-  justify-content: center;
-  margin-bottom: 2vh;
+  justify-content: space-between;
+  margin-top: 2vh;
+  margin-right: 2rem;
+  align-items: baseline;
+
+}
+
+.search-bar {
+  padding: .4rem;
+
+}
+
+.lets-go-button {
+  padding: .4rem;
 }
