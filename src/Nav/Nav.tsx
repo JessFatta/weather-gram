@@ -5,7 +5,6 @@ import './Nav.css'
 import SearchBar from '../SearchBar/SearchBar'
 
 
-
 const Nav: React.FC <NavProps> = ({setLocation, getRandomCity}) => {
   return (
     <nav className='nav-container'>
