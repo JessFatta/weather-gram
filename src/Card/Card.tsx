@@ -1,18 +1,7 @@
 import React from 'react'
+import { CardProps } from '../Interfaces'
 import './Card.css'
 
-type CardProps = {
-  location: string,
-  current: {
-    temp_f: number,
-    feelslike_f: number,
-    condition: {text: string, icon: string},
-    humidity: number,
-    wind_mph: number,
-    uv: number
-  },
-  saveFavoriteLocation: Function
-}
 
 const Card: React.FC <CardProps> =({location, current, saveFavoriteLocation}) => {
   return (
