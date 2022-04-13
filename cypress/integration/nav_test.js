@@ -6,7 +6,10 @@ describe('Nav Bar', () => {
   })
 
   it('As a user, I should see a search bar to enter locations', () => {
-    cy.get('input[class="search-bar"]').type('Denver')
+    cy.get('input[class="search-bar"]')
+      .should('have.attr', 'placeholder', 'Enter Location')
+      .type('Denver')
+      .should('have.value', 'Denver')
   })
 
   it('As a user, I should be able to click the Let\'s go! button', () => {
