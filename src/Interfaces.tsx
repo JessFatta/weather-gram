@@ -8,7 +8,8 @@ export interface AppState {
       wind_mph: number,
       uv: number,
     },
-    favorites: Object[]
+    favorites: Object[],
+    error: string
 }
 
 export interface Faves {
