@@ -12,10 +12,10 @@ const Nav: React.FC <NavProps> = ({setLocation, getRandomCity}) => {
       <h1 className='title'>Weather Gram</h1>
       <SearchBar setLocation={setLocation}/>
       <section className='buttons-container'>
-        <button className='home-button'><NavLink to="/">home </NavLink></button>
+        <button className='home-button'><NavLink to="/">home</NavLink></button>
         <button className='3day-button'><NavLink to="/3Day">3 day </NavLink></button>
         <button className='favorites-button'><NavLink to='/favorites'>Saved Locations</NavLink></button>
-        <button className='random-button' onClick={() => getRandomCity()}>random</button>
+        <button className='random-button' onClick={() => getRandomCity()}><NavLink to="/">random</NavLink></button>
       </section>
     </nav>
   )
