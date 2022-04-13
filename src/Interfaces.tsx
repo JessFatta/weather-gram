@@ -9,7 +9,7 @@ export interface AppState {
       uv: number,
     },
     favorites: Object[],
-    error: string
+    error: boolean
 }
 
 export interface Faves {
