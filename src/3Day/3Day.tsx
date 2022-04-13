@@ -48,6 +48,7 @@ class ThreeDay extends Component <ThreeDayProps, ThreeDayState> {
     }
 
   componentDidMount() {
+    console.log("TEST")
     get3DayData(this.props.location)
     .then(data => this.setState( { forecast: data.forecast}))
   }
