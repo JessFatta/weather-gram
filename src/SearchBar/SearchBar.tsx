@@ -47,16 +47,16 @@ class SearchBar extends Component <Props, SearchBarState> {
             className='search-bar'
             type='text'
             name='search-bar'
-            placeholder='Enter Location'
+            placeholder='Enter City or Zip'
             value={this.state.location}
             onChange={(event) => this.handleChange(event)}
             />
-          <button className='lets-go-button' onClick={(event) => this.submitLocation(event)}><NavLink to="/">Let's Go!</NavLink></button>
+          <button className='lets-go-button style' onClick={(event) => this.submitLocation(event)}><NavLink to="/">Let's Go!</NavLink></button>
         </div>
         <div>
           {this.state.hasError && <p>Please enter a location</p>}
         </div>
-      </div> 
+      </div>
     )
   }
 }
