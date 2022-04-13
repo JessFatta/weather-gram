@@ -22,7 +22,8 @@ class App extends Component  {
           wind_mph: 0,
           uv: 0
         },
-        favorites: []
+        favorites: [],
+        error: ''
     }
 
   componentDidMount = () => {
