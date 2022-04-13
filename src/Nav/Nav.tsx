@@ -13,10 +13,10 @@ const Nav: React.FC <NavProps> = ({setLocation, getRandomCity}) => {
       <SearchBar setLocation={setLocation}/>
     </div>
       <section className='buttons-container'>
-        <button className='home-button'><NavLink to="/">Home</NavLink></button>
-        <button className='3day-button'><NavLink to="/3Day">3 Day </NavLink></button>
-        <button className='favorites-button'><NavLink to='/favorites'>Saved Locations</NavLink></button>
-        <button className='random-button' onClick={() => getRandomCity()}><NavLink to="/">Random</NavLink></button>
+        <button className='home-button style'><NavLink to="/">Home</NavLink></button>
+        <button className='3day-button style'><NavLink to="/3Day">3 Day </NavLink></button>
+        <button className='favorites-button style'><NavLink to='/favorites'>Saved Locations</NavLink></button>
+        <button className='random-button style' onClick={() => getRandomCity()}><NavLink to="/">Random</NavLink></button>
       </section>
     </nav>
   )
