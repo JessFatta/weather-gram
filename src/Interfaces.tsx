@@ -28,11 +28,11 @@ export interface Faves {
 }
 
 export interface FavoritesProps {
-    favorites: Faves[]
-  }
+  favorites: Faves[]
+}
 
 
-  export interface NavProps {
+export interface NavProps {
   setLocation: Function
   getRandomCity: Function
 }
@@ -46,7 +46,7 @@ export interface ForecastCardProps {
     daily_chance_of_rain: number,
     text: string,
     icon: string
-  }
+}
 
   export interface FavoritesCardProps {
     location: string,
@@ -57,10 +57,10 @@ export interface ForecastCardProps {
       humidity: number,
       wind_mph: number,
       uv: number
-    }
   }
+}
 
-  export interface CardProps {
+export interface CardProps {
     location: string,
     current: {
       temp_f: number,
@@ -69,7 +69,6 @@ export interface ForecastCardProps {
       humidity: number,
       wind_mph: number,
       uv: number
-    },
+  },
     saveFavoriteLocation: Function
-  }
-  
+}
