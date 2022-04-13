@@ -23,7 +23,7 @@ class App extends Component  {
           uv: 0
         },
         favorites: [],
-        error: ''
+        error: false
     }
 
   componentDidMount = () => {
@@ -38,6 +38,7 @@ class App extends Component  {
   setLocation = (location: string) => {
     getCurrentData(location)
     .then(data => this.setState({ location: data.location.name, current: data.current }))
+    .catch(() => this.setState({error: true}))
   }
 
   getRandomIndex = (array: Array<string>) => {
@@ -48,6 +49,7 @@ class App extends Component  {
     let cityIndex = this.getRandomIndex(cityNames)
     getCurrentData(cityNames[cityIndex])
     .then(data => this.setState({ location: data.location.name, current: data.current }))
+    .catch(() => this.setState({error: true}))
   }
 
   render() {
