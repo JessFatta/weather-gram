@@ -5,6 +5,8 @@
   margin-bottom: 5vh;
   background: #6f869a8c;
   position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 a {
