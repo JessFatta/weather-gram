@@ -7,6 +7,7 @@ import Card from "../Card/Card";
 import Favorites from '../Favorites/Favorites';
 import { getCurrentData } from '../apiCalls';
 import cityNames from '../Random/RandomCityData.js';
+import Footer from '../Footer/Footer';
 
 
 class App extends Component  {
@@ -68,6 +69,7 @@ class App extends Component  {
         <Route path='/favorites' render={() => {
           return <Favorites favorites={this.state.favorites}/>
         }} />
+        <Footer />
       </div>
     )
   }
