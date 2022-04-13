@@ -42,7 +42,7 @@ class SearchBar extends Component <Props, SearchBarState> {
           value={this.state.location}
           onChange={(event) => this.handleChange(event)}
           />
-          <button onClick={(event) => this.submitLocation(event)}>Let's go!</button>
+          <button className='lets-go-button' onClick={(event) => this.submitLocation(event)}>Let's go!</button>
       </div>
     )
   }
