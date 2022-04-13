@@ -1,9 +1,10 @@
 import React from 'react'
-import { CardProps } from '../Interfaces'
-import './Card.css'
+import { FavoritesCardProps } from '../Interfaces'
 
 
-const Card: React.FC <CardProps> =({location, current, saveFavoriteLocation}) => {
+
+
+const FavoritesCard: React.FC <FavoritesCardProps> =({location, current}) => {
   return (
     <div className="card">
     <img src={current.condition.icon} alt={current.condition.text}/>
@@ -14,12 +15,9 @@ const Card: React.FC <CardProps> =({location, current, saveFavoriteLocation}) =>
       <p>Humidity: {current.humidity} %</p>
       <p>Wind: {current.wind_mph} mph</p>
       <p>UV Index: {current.uv}</p>
-      <div className='favorite-button'>
-        <button onClick={() => saveFavoriteLocation()}>Favorite</button>
-      </div>
     </div>
   )
 }
 
 
-export default Card
+export default FavoritesCard
