@@ -8,7 +8,7 @@ const get3DayData = (location) => {
   .then(response => handleResponse(response))
 }
 
-const handleResponse = () => {
+const handleResponse = (response) => {
   if(!response.ok) {
     throw new Error('Something went wrong!')
   } else {
