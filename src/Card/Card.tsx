@@ -3,9 +3,9 @@ import { CardProps } from '../Interfaces'
 import './Card.css'
 
 
-const Card: React.FC <CardProps> =({location, current, saveFavoriteLocation}) => {
+const Card: React.FC <CardProps> =({key, location, current, saveFavoriteLocation}) => {
   return (
-    <div className="card">
+    <div className="card" key={key}>
     <img src={current.condition.icon} alt={current.condition.text}/>
       <p>Location: {location}</p>
       <p>Temperature: {current.temp_f} F</p>
