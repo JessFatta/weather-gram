@@ -55,10 +55,8 @@ class ThreeDay extends Component <ThreeDayProps, ThreeDayState> {
   }
 
   render() {
-    return (
-    this.state.forecast.forecastday.map(day => {
+    const forecastCards: JSX.Element[] = this.state.forecast.forecastday.map(day => {
       return (
-        <div className="three-day-container">
         <ForecastCard
         location={this.props.location}
         maxtemp_f={day.day.maxtemp_f}
@@ -70,9 +68,12 @@ class ThreeDay extends Component <ThreeDayProps, ThreeDayState> {
         daily_chance_of_rain={day.day.daily_chance_of_rain}
         key={Date.now()}
         />
-        </div>
       )
     })
+  return (
+    <div className="three-day-container">
+    {forecastCards}
+    </div>
   )
   }
 }
