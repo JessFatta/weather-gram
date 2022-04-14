@@ -1,3 +1,10 @@
 .forecast-card {
-  border: 2px solid green;
+  width: 30vw;
+  border: 2px solid purple;
+  padding: 20px;
+ /* display: grid; */
+
+ justify-items: center;
+ /* grid-template-columns: repeat(4, 1fr); */
+ /* grid-gap: 20px; */
 }
