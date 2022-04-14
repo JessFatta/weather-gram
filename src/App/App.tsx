@@ -30,7 +30,18 @@ class App extends Component  {
   }
 
   saveFavoriteLocation = (): void => {
-    this.setState({favorites: [...this.state.favorites, {location: this.state.location, current: this.state.current}]})
+    const filteredDuplicates = this.state.favorites.filter((favorite: {location: string}) => {
+      if(! {favorites: {location: this.state.location}}) {
+        this.setState({favorites: [...this.state.favorites, {location: this.state.location, current: this.state.current}]})
+      }
+    })
+  }
+
+  removeFavoriteLocation = (id: number): void => {
+    const filteredFavorites = this.state.favorites.filter((favorite: {id: number}) => {
+      return favorite.id !== id
+    })
+    this.setState({favorites: filteredFavorites})
   }
 
   setLocation = (location: string) => {
