@@ -2,9 +2,9 @@ import React from 'react'
 import { FavoritesCardProps } from '../Interfaces'
 
 
-const FavoritesCard: React.FC <FavoritesCardProps> =({location, current}) => {
+const FavoritesCard: React.FC <FavoritesCardProps> =({key, location, current}) => {
   return (
-    <div className="card">
+    <div className="card" key={key}>
     <img src={current.condition.icon} alt={current.condition.text}/>
       <p>Location: {location}</p>
       <p>Temperature: {current.temp_f} F</p>
