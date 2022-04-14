@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { get3DayData } from '../apiCalls';
 import ForecastCard from '../ForecastCard/ForecastCard';
+import "./3Day.css";
 
 type ThreeDayProps = {
   location: string
