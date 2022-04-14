@@ -10,7 +10,7 @@ const Favorites: React.FC <FavoritesProps> = ({favorites}) => {
       <FavoritesCard
         location={favorite.location}
         current={favorite.current}
-        key={Date.now()}
+        key={favorite.key}
       />
     )
   })
