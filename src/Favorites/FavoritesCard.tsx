@@ -2,8 +2,6 @@ import React from 'react'
 import { FavoritesCardProps } from '../Interfaces'
 
 
-
-
 const FavoritesCard: React.FC <FavoritesCardProps> =({location, current}) => {
   return (
     <div className="card">
