@@ -31,11 +31,9 @@ class App extends Component  {
   }
 
   saveFavoriteLocation = (): void => {
-      const savedFavorites = this.state.favorites.filter(favorite => favorite.location !== this.state.location)
-
+      const savedFavorites = this.state.favorites.filter((favorite: {location: string}) => favorite.location !== this.state.location)
         this.setState({favorites: [...savedFavorites, {key: this.state.key, location: this.state.location, current: this.state.current}]})
-
-      }
+  }
 
   removeFavoriteLocation = (id: number): void => {
     const filteredFavorites = this.state.favorites.filter((favorite: {id: number}) => {
@@ -79,7 +77,8 @@ class App extends Component  {
           return <ThreeDay location={this.state.location}/>
         }} />
         <Route path='/favorites' render={() => {
-          return <Favorites favorites={this.state.favorites} />
+          return <Favorites favorites={this.state.favorites}
+          removeFavoriteLocation={this.removeFavoriteLocation} />
         }} />
         <Footer />
       </div>
