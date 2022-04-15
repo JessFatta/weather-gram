@@ -67,4 +67,15 @@ describe('Nav Bar', () => {
 
     .url().should('eq', 'http://localhost:3000/')
   })
+  it("Should be able to visit the page and render the logo", () => {
+    cy.intercept('GET', 'http://api.weatherapi.com/v1/*', {
+        statusCode: 200,
+        fixture: 'locations.json'
+      }).as('matchedUrl')
+    cy.visit('http://localhost:3000/')
+      .get('img')
+      .first()
+      .should('have.attr', 'alt', 'Climate World')
+      .should("be.visible")
+  });
 })
