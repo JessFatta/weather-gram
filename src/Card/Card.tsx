@@ -15,7 +15,7 @@ const Card: React.FC <CardProps> =({key, location, current, saveFavoriteLocation
       <p>Wind: {current.wind_mph} mph</p>
       <p>UV Index: {current.uv}</p>
       <div className='favorite-button'>
-        <button onClick={() => saveFavoriteLocation()}>Favorite</button>
+        <button className='favorite-button' onClick={() => saveFavoriteLocation()}>Favorite</button>
       </div>
     </div>
   )
