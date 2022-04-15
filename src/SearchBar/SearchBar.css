@@ -16,12 +16,8 @@
 
 }
 
-
-
-.lets-go-button {background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%)}
 .lets-go-button {
-   /* margin: 10px;
-   padding: 15px 45px; */
+  background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%);
    padding: .4rem;
    text-align: center;
    text-transform: uppercase;
@@ -34,7 +30,8 @@
  }
 
  .lets-go-button:hover {
-   background-position: right center; /* change the direction of the change here */
+   background-position: right center;
    color: #fff;
    text-decoration: none;
+   cursor: pointer;
  }
