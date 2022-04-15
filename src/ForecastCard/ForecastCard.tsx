@@ -5,7 +5,7 @@ import './ForecastCard.css'
 
 const ForecastCard: React.FC <ForecastCardProps> =({location, maxtemp_f, mintemp_f, avghumidity, daily_chance_of_rain, text, icon, date}) => {
   return (
-    <div className="forecast-card">
+    <div className="card">
       <img src={icon} alt={text} />
       <p>Location: {location}</p>
       <p>Date: {date}</p>

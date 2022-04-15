@@ -1,4 +1,5 @@
 export interface AppState {
+    key: number,
     location: string,
     current: {
       temp_f: number,
@@ -13,6 +14,7 @@ export interface AppState {
 }
 
 export interface Faves {
+    key: number,
     current: {
         temp_f: number;
         feelslike_f: number;
@@ -28,7 +30,8 @@ export interface Faves {
 }
 
 export interface FavoritesProps {
-  favorites: Faves[]
+  favorites: Faves[],
+  removeFavoriteLocation: Function
 }
 
 
@@ -49,6 +52,7 @@ export interface ForecastCardProps {
 }
 
   export interface FavoritesCardProps {
+    key: number,
     location: string,
     current: {
       temp_f: number,
@@ -57,10 +61,12 @@ export interface ForecastCardProps {
       humidity: number,
       wind_mph: number,
       uv: number
-  }
+  },
+    removeFavoriteLocation: Function
 }
 
 export interface CardProps {
+    key: number,
     location: string,
     current: {
       temp_f: number,

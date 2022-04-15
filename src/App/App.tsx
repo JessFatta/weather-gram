@@ -7,10 +7,12 @@ import Card from "../Card/Card";
 import Favorites from '../Favorites/Favorites';
 import { getCurrentData } from '../apiCalls';
 import cityNames from '../Random/RandomCityData.js';
+import Footer from '../Footer/Footer';
 
 
 class App extends Component  {
     state = {
+        key: 0,
         location: "",
         current: {
           temp_f: 0,
@@ -29,12 +31,20 @@ class App extends Component  {
   }
 
   saveFavoriteLocation = (): void => {
-    this.setState({favorites: [...this.state.favorites, {location: this.state.location, current: this.state.current}]})
+      const savedFavorites = this.state.favorites.filter((favorite: {location: string}) => favorite.location !== this.state.location)
+        this.setState({favorites: [...savedFavorites, {key: this.state.key, location: this.state.location, current: this.state.current}]})
+  }
+
+  removeFavoriteLocation = (id: number): void => {
+    const filteredFavorites = this.state.favorites.filter((favorite: {id: number}) => {
+      return favorite.id !== id
+    })
+    this.setState({favorites: filteredFavorites})
   }
 
   setLocation = (location: string) => {
     getCurrentData(location)
-    .then(data => this.setState({location: data.location.name, current: data.current}))
+    .then(data => this.setState({key: Date.now(), location: data.location.name, current: data.current}))
     .catch(() => this.setState({error: true}))
   }
 
@@ -58,6 +68,7 @@ class App extends Component  {
           />
         <Route exact path="/" render={() => {
           return <Card
+          key={this.state.key}
           location={this.state.location}
           current={this.state.current}
           saveFavoriteLocation={this.saveFavoriteLocation}/>
@@ -66,8 +77,10 @@ class App extends Component  {
           return <ThreeDay location={this.state.location}/>
         }} />
         <Route path='/favorites' render={() => {
-          return <Favorites favorites={this.state.favorites}/>
+          return <Favorites favorites={this.state.favorites}
+          removeFavoriteLocation={this.removeFavoriteLocation} />
         }} />
+        <Footer />
       </div>
     )
   }

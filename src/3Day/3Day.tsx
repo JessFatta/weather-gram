@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { get3DayData } from '../apiCalls';
 import ForecastCard from '../ForecastCard/ForecastCard';
+import "./3Day.css";
 
 type ThreeDayProps = {
   location: string
@@ -48,15 +49,14 @@ class ThreeDay extends Component <ThreeDayProps, ThreeDayState> {
     }
 
   componentDidMount() {
+    console.log("TEST")
     get3DayData(this.props.location)
     .then(data => this.setState( { forecast: data.forecast}))
   }
 
   render() {
-    return (
-    this.state.forecast.forecastday.map(day => {
+    const forecastCards: JSX.Element[] = this.state.forecast.forecastday.map(day => {
       return (
-        <div className="three-day-container">
         <ForecastCard
         location={this.props.location}
         maxtemp_f={day.day.maxtemp_f}
@@ -68,9 +68,12 @@ class ThreeDay extends Component <ThreeDayProps, ThreeDayState> {
         daily_chance_of_rain={day.day.daily_chance_of_rain}
         key={Date.now()}
         />
-        </div>
       )
     })
+  return (
+    <div className="three-day-container">
+    {forecastCards}
+    </div>
   )
   }
 }

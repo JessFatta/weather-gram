@@ -6,10 +6,30 @@
   background: #6f869a8c;
 }
 
-.title {
-display: flex;
-justify-content: center;
+a {
+  text-decoration: none;
+  color: #fcf1e0e0;
+}
 
+a :hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+img {
+  height: 8vh;
+  width: 8vh;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.title {
+  display: flex;
+  margin-left: -47rem;
+  background: -webkit-linear-gradient(#16222A, #3A6073);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000001a;
+  font-size: 6vh;
 }
 
 .buttons-container {
@@ -17,4 +37,42 @@ justify-content: center;
   flex-direction: row;
   margin-bottom: 2vh;
   justify-content: space-evenly;
+}
+
+.title-searchbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-button,
+.three-day-button,
+.favorites-button,
+.random-button {
+  background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%)
+}
+
+.home-button,
+.three-day-button,
+.favorites-button,
+.random-button {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.home-button:hover,
+.three-day-button:hover,
+.favorites-button:hover,
+.random-button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
 }

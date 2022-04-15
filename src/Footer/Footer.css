@@ -1,0 +1,13 @@
+footer {
+  height: 8vh;
+  display: flex;
+  border: 2px solid rgba(255, 255, 255, 0.113);
+  background: #132432;
+  color: rgb(181, 181, 181);
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  margin: 0% 5% 0% 5%;
+}
