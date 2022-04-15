@@ -17,8 +17,13 @@ const Favorites: React.FC <FavoritesProps> = ({removeFavoriteLocation, favorites
   })
 
   return (
-    <div className='favorite-cards-container'>
-      {favoriteCards}
+    <div>
+      <div className="add-container">
+        {!favorites.length && <h2>Add Some Favorites!</h2> }
+      </div>
+      <div className='favorite-cards-container'>
+        {favoriteCards}
+      </div>
     </div>
   )
 }
