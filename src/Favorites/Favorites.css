@@ -2,9 +2,5 @@
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-gap: 20px;
-border: 2px solid powderblue;
+height: 100vh;
 }
-
-/* .favorite-card {
-  border: 2px solid blue;
-} */
