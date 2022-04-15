@@ -2,7 +2,7 @@ import React from 'react'
 import { FavoritesCardProps } from '../Interfaces'
 
 
-const FavoritesCard: React.FC <FavoritesCardProps> =({key, location, current}) => {
+const FavoritesCard: React.FC <FavoritesCardProps> =({removeFavoriteLocation, key, location, current}) => {
   return (
     <div className="card" key={key}>
     <img src={current.condition.icon} alt={current.condition.text}/>
@@ -13,6 +13,9 @@ const FavoritesCard: React.FC <FavoritesCardProps> =({key, location, current}) =
       <p>Humidity: {current.humidity} %</p>
       <p>Wind: {current.wind_mph} mph</p>
       <p>UV Index: {current.uv}</p>
+      <div className='favorite-button'>
+        <button onClick={() => removeFavoriteLocation()}>Remove Favorite</button>
+      </div>
     </div>
   )
 }
