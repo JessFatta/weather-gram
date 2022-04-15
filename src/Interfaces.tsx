@@ -30,7 +30,8 @@ export interface Faves {
 }
 
 export interface FavoritesProps {
-  favorites: Faves[]
+  favorites: Faves[],
+  removeFavoriteLocation: Function
 }
 
 
@@ -60,7 +61,8 @@ export interface ForecastCardProps {
       humidity: number,
       wind_mph: number,
       uv: number
-  }
+  },
+    removeFavoriteLocation: Function
 }
 
 export interface CardProps {
