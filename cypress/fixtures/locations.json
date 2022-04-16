@@ -1,0 +1,16 @@
+
+{
+"key": 1,
+"location": {"name": "London"},
+"current": {
+    "temp_f": 50,
+    "feelslike_f": 51,
+    "condition": {
+            "text": "Rainy",
+        "icon": "something.jpg"
+    },
+    "humidity": 30,
+    "wind_mph": 15,
+    "uv": 3
+    }
+ }

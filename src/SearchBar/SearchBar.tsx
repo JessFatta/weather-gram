@@ -51,7 +51,7 @@ class SearchBar extends Component <Props, SearchBarState> {
             value={this.state.location}
             onChange={(event) => this.handleChange(event)}
             />
-          <NavLink to="/"><button className='lets-go-button style' onClick={(event) => this.submitLocation(event)}>Let's Go!</button></NavLink>
+          <NavLink to="/"><button className='lets-go-button' onClick={(event) => this.submitLocation(event)}>Let's Go!</button></NavLink>
         </div>
         <div>
           {this.state.hasError && <p>Please enter a location</p>}

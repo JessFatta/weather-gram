@@ -1,0 +1,43 @@
+{
+    "forecast": {
+        "forecastday": [
+        {
+            "date": "2022-04-15",
+            "day": {
+            "maxtemp_f": 30,
+            "mintemp_f": 20,
+            "avghumidity": 20,
+            "daily_chance_of_rain": 14,
+            "condition": {
+                "text": "Cloudy",
+                "icon": "clouds.jpg"
+            }
+            }
+        }, {
+            "date": "2022-04-16",
+            "day": {
+            "maxtemp_f": 30,
+            "mintemp_f": 20,
+            "avghumidity": 20,
+            "daily_chance_of_rain": 14,
+            "condition": {
+                "text": "Cloudy",
+                "icon": "clouds.jpg"
+            }
+            }
+        } , {
+            "date": "2022-04-17",
+            "day": {
+            "maxtemp_f": 30,
+            "mintemp_f": 20,
+            "avghumidity": 20,
+            "daily_chance_of_rain": 14,
+            "condition": {
+                "text": "Cloudy",
+                "icon": "clouds.jpg"
+            }
+            }
+        }
+        ]
+    }
+    } 
