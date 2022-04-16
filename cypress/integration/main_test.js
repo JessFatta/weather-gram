@@ -35,4 +35,10 @@ describe('Main', () => {
         .get('button[class="favorite-button"]')
         .should('contain', 'Favorite')
     })
+    it('As a user, I should see a footer', () => {
+        cy.get('footer')
+        .should('be.visible')
+        .should('contain', '©2022 Weather Gram')
+        .should('contain', 'A very real Weather site by Andrew, Daniel, Jess, Emily')
+    })
 })
