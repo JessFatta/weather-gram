@@ -24,8 +24,6 @@ img {
 }
 
 .title {
-  display: flex;
-  margin-left: -47rem;
   background: -webkit-linear-gradient(#16222A, #3A6073);
     -webkit-background-clip: text;
     -webkit-text-fill-color: #0000001a;
@@ -40,6 +38,11 @@ img {
 }
 
 .title-searchbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-container {
   display: flex;
   justify-content: space-between;
 }
