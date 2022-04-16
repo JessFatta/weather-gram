@@ -7,6 +7,6 @@
 .loading-error-message {
   display: flex;
   justify-content: center;
-  margin-bottom: 30%;
+  height: 100vh;
   color: #132432;
 }
