@@ -66,13 +66,17 @@ class App extends Component  {
           setLocation={this.setLocation}
           getRandomCity={this.getRandomCity}
           />
+          <div className='loading-error-message'>
+            {this.state.error ? <h2>Something went wrong! Send complaints to Scott and Robbie</h2> :
+          
         <Route exact path="/" render={() => {
           return <Card
           key={this.state.key}
           location={this.state.location}
           current={this.state.current}
           saveFavoriteLocation={this.saveFavoriteLocation}/>
-        }} />
+        }} /> }
+        </div>
         <Route path="/3Day" render={() => {
           return <ThreeDay location={this.state.location}/>
         }} />
