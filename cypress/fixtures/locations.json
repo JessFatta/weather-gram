@@ -6,7 +6,7 @@
     "feelslike_f": 51,
     "condition": {
             "text": "Rainy",
-        "icon": "something.jpg"
+        "icon": "./rainy.png"
     },
     "humidity": 30,
     "wind_mph": 15,
