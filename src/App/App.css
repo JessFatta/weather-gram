@@ -3,3 +3,10 @@
   background-size: cover;
   height: 100%;
 }
+
+.loading-error-message {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30%;
+  color: #132432;
+}
