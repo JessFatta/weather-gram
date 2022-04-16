@@ -10,8 +10,8 @@ const Nav: React.FC <NavProps> = ({setLocation, getRandomCity}) => {
   return (
     <nav className='nav-container'>
     <div className='title-searchbar-container'>
-    <img src={climate} alt="Climate World" />
-      <h1 className='title'>Weather Gram</h1>
+      <NavLink to='/'><img src={climate} alt="Climate World" /></NavLink>
+      <NavLink to='/'><h1 className='title'>Weather Gram</h1></NavLink>
       <SearchBar setLocation={setLocation}/>
     </div>
       <section className='buttons-container'>
