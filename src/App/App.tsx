@@ -30,21 +30,23 @@ class App extends Component  {
     this.getRandomCity()
   }
 
-  saveFavoriteLocation = (): void => {
+  saveFavoriteLocation = () => {
       const savedFavorites = this.state.favorites.filter((favorite: {location: string}) => favorite.location !== this.state.location)
         this.setState({favorites: [...savedFavorites, {key: this.state.key, location: this.state.location, current: this.state.current}]})
   }
 
-  removeFavoriteLocation = (id: number): void => {
-    const filteredFavorites = this.state.favorites.filter((favorite: {id: number}) => {
-      return favorite.id !== id
+  removeFavoriteLocation = (id: string) => {
+    console.log(id)
+    const filteredFavorites = this.state.favorites.filter((favorite: { location: string}) => {
+      return favorite.location !== id
     })
+    console.log(filteredFavorites)
     this.setState({favorites: filteredFavorites})
   }
 
   setLocation = (location: string) => {
     getCurrentData(location)
-    .then(data => this.setState({key: Date.now(), location: data.location.name, current: data.current}))
+    .then(data => this.setState({key: Date.now(), location: data.location.name, current: data.current, error: false}))
     .catch(() => this.setState({error: true}))
   }
 
@@ -55,7 +57,7 @@ class App extends Component  {
   getRandomCity = () => {
     let cityIndex = this.getRandomIndex(cityNames)
     getCurrentData(cityNames[cityIndex])
-    .then(data => this.setState({location: data.location.name, current: data.current}))
+    .then(data => this.setState({key: Date.now(), location: data.location.name, current: data.current}))
     .catch(() => this.setState({error: true}))
   }
 
@@ -81,7 +83,8 @@ class App extends Component  {
           return <ThreeDay location={this.state.location}/>
         }} />
         <Route path='/favorites' render={() => {
-          return <Favorites favorites={this.state.favorites}
+          return <Favorites 
+          favorites={this.state.favorites}
           removeFavoriteLocation={this.removeFavoriteLocation} />
         }} />
         <Footer />

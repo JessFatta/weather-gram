@@ -1,11 +1,14 @@
 footer {
   height: 8vh;
+  width: 100%;
   display: flex;
   border: 2px solid rgba(255, 255, 255, 0.113);
   background: #132432;
   color: rgb(181, 181, 181);
   align-items: center;
   justify-content: center;
+  position: relative;
+  bottom: 0%;
 }
 
 .footer-text {

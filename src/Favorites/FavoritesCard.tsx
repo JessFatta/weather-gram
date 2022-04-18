@@ -14,7 +14,7 @@ const FavoritesCard: React.FC <FavoritesCardProps> =({removeFavoriteLocation, ke
       <p>Wind: {current.wind_mph} mph</p>
       <p>UV Index: {current.uv}</p>
       <div className='favorite-button'>
-        <button className="unfavorite-button" onClick={() => removeFavoriteLocation()}>Remove Favorite</button>
+        <button className="unfavorite-button" onClick={() =>  removeFavoriteLocation(location)}>Remove Favorite</button>
       </div>
     </div>
   )
