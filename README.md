@@ -24,9 +24,11 @@ We did not use Hooks, although a future refactor would likely include these.
 
 ## Code Architechture and Project Spec
 
-Organized with Github Project Board, [click here](https://github.com/JessFatta/weather-gram/projects/1).
-If you want to know more about our code architecture, [click here](https://gist.github.com/Emily-Cathleen/64ac33e4a51b955429f5f020d8ec842a).
-If you want to see the Turing Project Spec, [click here](https://frontend.turing.edu/projects/module-3/stretch.html).
+Organized with Github Project Board, [click here](https://github.com/JessFatta/weather-gram/projects/1)
+
+If you want to know more about our code architecture, [click here](https://gist.github.com/Emily-Cathleen/64ac33e4a51b955429f5f020d8ec842a)
+
+If you want to see the Turing Project Spec, [click here](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 # Getting Started with Create React App
 
@@ -65,11 +67,14 @@ To get a local copy up and running follow these simple steps.
    ```sh
    npm start
    ```
+   
+## Wins/Challenges
+
+## Future State
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
 
