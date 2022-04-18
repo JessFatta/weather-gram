@@ -23,8 +23,8 @@ We did not use Hooks, although a future refactor would likely include these.
 ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
 
 ## Code Architechture and Project Spec
-- Project Structure Organized with [GitHub Project Board](https://github.com/JessFatta/weather-gram/projects/1)
 - If you want to know more about our code architecture, [click here](https://gist.github.com/Emily-Cathleen/64ac33e4a51b955429f5f020d8ec842a)
+- Project Structure Organized with [GitHub Project Board](https://github.com/JessFatta/weather-gram/projects/1)
 - If you want to see the Turing Project Spec, [click here](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 # Getting Started with Create React App
