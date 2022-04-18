@@ -54,6 +54,7 @@ To get a local copy up and running follow these simple steps.
 - Addition of an Interface file was critical in streamlining our project and identifying data types. 
 - Finding and vetting an external API.
 - Successfully implementing ReactRouter with TypeScript was a huge learning curve for our team. 
+- Our API clearly stated that we could have a 14 day forecast. However our 7 day forecast API call did not work. We eventually discovered that the API data did not include any weather forecast beyond 3 days. At this point, we changed the scope of our project to just include a 3 day forecast. 
 
 ## Future State
 - Refactoring using Hooks. 
