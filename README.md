@@ -38,33 +38,16 @@ To get a local copy up and running follow these simple steps.
 
 1. In your terminal, clone the repo
    ```sh
-   git clone git@github.com:ermatlock/fitlit.git
+   git clone https://github.com/JessFatta/weather-gram
    ```
 2. `cd` into that directory
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
+3. npm install --save-dev typescript @types/node @types/react @types/react-dom @types/jest @types/react-router-dom
 4. Start the server
    ```sh
    npm start
    ``` 
-   
-## Local Server
-1. In your terminal, clone the repo
-   ```sh
-   git@github.com:turingschool-examples/fitlit-api.git
-   ```
-2. `cd` into that directory
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Start the server
-   ```sh
-   npm start
-   ```
-   
+
+
 ## Wins/Challenges
 
 ## Future State
