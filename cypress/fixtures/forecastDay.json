@@ -10,7 +10,7 @@
             "daily_chance_of_rain": 14,
             "condition": {
                 "text": "Cloudy",
-                "icon": "clouds.jpg"
+                "icon": "./cloudy.png"
             }
             }
         }, {
@@ -22,7 +22,7 @@
             "daily_chance_of_rain": 14,
             "condition": {
                 "text": "Cloudy",
-                "icon": "clouds.jpg"
+                "icon": "./cloudy.png"
             }
             }
         } , {
@@ -34,10 +34,10 @@
             "daily_chance_of_rain": 14,
             "condition": {
                 "text": "Cloudy",
-                "icon": "clouds.jpg"
+                "icon": "./cloudy.png"
             }
             }
         }
         ]
     }
-    } 
+} 

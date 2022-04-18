@@ -1,4 +1,3 @@
-
 {
 "key": 1,
 "location": {"name": "London"},
@@ -7,10 +6,10 @@
     "feelslike_f": 51,
     "condition": {
             "text": "Rainy",
-        "icon": "something.jpg"
+        "icon": "./rainy.png"
     },
     "humidity": 30,
     "wind_mph": 15,
     "uv": 3
     }
- }
+}

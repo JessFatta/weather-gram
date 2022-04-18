@@ -67,7 +67,7 @@ describe('Nav Bar', () => {
 
     .url().should('eq', 'http://localhost:3000/')
   })
-  it("Should be able to visit the page and render the logo", () => {
+  it("As a user, I should be able to visit the page and render the logo", () => {
     cy.intercept('GET', 'http://api.weatherapi.com/v1/*', {
         statusCode: 200,
         fixture: 'locations.json'
@@ -78,4 +78,18 @@ describe('Nav Bar', () => {
       .should('have.attr', 'alt', 'Climate World')
       .should("be.visible")
   });
+
+  it('As a user, if I click lets go with nothing entered in the field, I will see an error', () => {
+    cy.intercept('GET', 'http://api.weatherapi.com/v1/*', {
+        statusCode: 400,
+        ok: false
+      }).as('matchedUrl')
+      cy.visit('http://localhost:3000/')
+      .get('input[class="search-bar"]')
+      .should('have.value', '')
+      .get('button[class="lets-go-button"]').click()
+      .get('p[class="search-error-message"]')
+      .contains('Please enter a location')
+})
+
 })
