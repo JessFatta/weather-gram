@@ -7,7 +7,7 @@ footer {
   color: rgb(181, 181, 181);
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: relative;
   bottom: 0%;
 }
 
