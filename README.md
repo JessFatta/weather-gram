@@ -11,7 +11,7 @@ We did not use Hooks, although a future refactor would likely include these.
 - [Jess Fatta](https://github.com/JessFatta)
 - [Daniel Solomon](https://github.com/danielsolomon332)
 - [Andrew Musselman](https://github.com/Andrew-Musselman)
-- Project Structure Organized with [GitHub Project Board](https://github.com/JessFatta/weather-gram/projects/1)
+
 
 ## Tech Stack
 
@@ -23,16 +23,13 @@ We did not use Hooks, although a future refactor would likely include these.
 ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
 
 ## Code Architechture and Project Spec
-
-Organized with Github Project Board, [click here](https://github.com/JessFatta/weather-gram/projects/1)
-
-If you want to know more about our code architecture, [click here](https://gist.github.com/Emily-Cathleen/64ac33e4a51b955429f5f020d8ec842a)
-
-If you want to see the Turing Project Spec, [click here](https://frontend.turing.edu/projects/module-3/stretch.html)
+- Project Structure Organized with [GitHub Project Board](https://github.com/JessFatta/weather-gram/projects/1)
+- If you want to know more about our code architecture, [click here](https://gist.github.com/Emily-Cathleen/64ac33e4a51b955429f5f020d8ec842a)
+- If you want to see the Turing Project Spec, [click here](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Getting Started
 To get a local copy up and running follow these simple steps.
