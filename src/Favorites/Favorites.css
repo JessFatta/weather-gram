@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     color: #132432;
+    height: 60vh;
 }
 
 .favorite-cards-container{
