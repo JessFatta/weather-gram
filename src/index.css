@@ -12,13 +12,3 @@ code {
     monospace;
 }
 
-@media screen and (min-width: 901px) {
-  nav {
-    border: solid 3px blue;
-  }
-}
-@media screen and (max-width : 900px) {
-  nav {
-    border: solid 3px green;
-  }
-}
