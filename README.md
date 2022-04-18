@@ -1,4 +1,10 @@
-## Weather Gram ⛈🌦
+## 🌦 Weather Gram ⛈
+
+Welcome to Weather Gram! This user friendly application allows you to check the weather based on location input and get the 3 day forecast for your area. 
+
+## Stretch Tech
+Our team decided to take on the challenge of learning, implementing, and testing this applicaition using TypeScript. 
+We did not use Hooks, although a future refactor would likely include these. 
 
 ## Contributors
 - [Emily Corcoran](https://github.com/Emily-Cathleen)
@@ -14,13 +20,12 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)
 
 ## Code Architechture and Project Spec
 
 Organized with Github Project Board, [click here](https://github.com/JessFatta/weather-gram/projects/1).
-
 If you want to know more about our code architecture, [click here](https://gist.github.com/Emily-Cathleen/64ac33e4a51b955429f5f020d8ec842a).
-
 If you want to see the Turing Project Spec, [click here](https://frontend.turing.edu/projects/module-3/stretch.html).
 
 # Getting Started with Create React App
