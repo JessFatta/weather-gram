@@ -1,10 +1,9 @@
 ## 🌦 Weather Gram ⛈
 
-Welcome to Weather Gram! This user friendly application allows you to check the weather based on location input and get the 3 day forecast for your area. 
+Welcome to Weather Gram! This user friendly application allows you to check the weather based on location input and get the 3 day forecast for your area. Additionally, you can save your favorited locations. 
 
 ## Stretch Tech
 Our team decided to take on the challenge of learning, implementing, and testing this applicaition using TypeScript. 
-We did not use Hooks, although a future refactor would likely include these. 
 
 ## Contributors
 - [Emily Corcoran](https://github.com/Emily-Cathleen)
@@ -50,9 +49,14 @@ To get a local copy up and running follow these simple steps.
    npm start
    ``` 
 
-## Wins/Challenges
+## Team Wins / Challenges
+- Learning and implementing TypeScript in 12 days.
+- Addition of an Interface file was critical in streamlining our project and identifying data types. 
+- Finding and vetting an external API.
+- Successfully implementing ReactRouter with TypeScript was a huge learning curve for our team. 
 
 ## Future State
+- Refactoring using Hooks. 
 
 ## Learn More
 
