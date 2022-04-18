@@ -44,7 +44,7 @@ class App extends Component  {
 
   setLocation = (location: string) => {
     getCurrentData(location)
-    .then(data => this.setState({key: Date.now(), location: data.location.name, current: data.current}))
+    .then(data => this.setState({key: Date.now(), location: data.location.name, current: data.current, error: false}))
     .catch(() => this.setState({error: true}))
   }
 
