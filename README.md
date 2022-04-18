@@ -41,12 +41,14 @@ To get a local copy up and running follow these simple steps.
    git clone https://github.com/JessFatta/weather-gram
    ```
 2. `cd` into that directory
-3. npm install --save-dev typescript @types/node @types/react @types/react-dom @types/jest @types/react-router-dom
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
 4. Start the server
    ```sh
    npm start
    ``` 
-
 
 ## Wins/Challenges
 
