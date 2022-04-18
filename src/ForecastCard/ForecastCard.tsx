@@ -1,6 +1,6 @@
 import React from 'react'
 import { ForecastCardProps } from '../Interfaces'
-import './ForecastCard.css'
+import '../Card/Card.css'
 
 
 const ForecastCard: React.FC <ForecastCardProps> =({location, maxtemp_f, mintemp_f, avghumidity, daily_chance_of_rain, text, icon, date}) => {
