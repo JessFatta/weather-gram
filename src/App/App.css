@@ -1,7 +1,7 @@
 .App {
   background-image: url("../background.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 
 .loading-error-message {
