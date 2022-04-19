@@ -1,13 +1,13 @@
 .add-container {
-    display: flex;
-    justify-content: center;
-    color: #132432;
-    height: 60vh;
+  display: flex;
+  justify-content: center;
+  color: #132432;
+  height: 60vh;
 }
 
 .favorite-cards-container{
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-gap: 20px;
-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  height: 100%;
 }
