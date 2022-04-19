@@ -57,6 +57,7 @@ To get a local copy up and running follow these simple steps.
 - Our API clearly stated that we could have a 14 day forecast. However our 7 day forecast API call did not work. We eventually discovered that the API data did not include any weather forecast beyond 3 days. At this point, we changed the scope of our project to just include a 3 day forecast. 
 
 ## Future State
+- Use GeoLocation - compatible with https
 - Refactoring using Hooks. 
 
 ## Learn More
