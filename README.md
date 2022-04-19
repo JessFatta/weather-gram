@@ -2,9 +2,20 @@
 
 Welcome to Weather Gram! This user friendly application allows you to check the weather based on location input and get the 3 day forecast for your area. Additionally, you can save your favorited locations. 
 
-[](https://media.giphy.com/media/k56E8trms4qjcCM201/giphy.gif)
 
-[](https://media.giphy.com/media/z3BP6WhP4imEWzacix/giphy.gif)
+Explore locations and see three day forecasts
+
+![](https://media.giphy.com/media/z3BP6WhP4imEWzacix/giphy.gif)
+
+
+Search and favorite locations
+
+![](https://media.giphy.com/media/3vnFEk6F8RuJgUcWgM/giphy.gif)
+
+
+Unfavorite Locations 
+
+![](https://media.giphy.com/media/deDTYL1GxxYi1IhlCG/giphy.gif)
 
 ## Stretch Tech
 Our team decided to take on the challenge of learning, implementing, and testing this applicaition using TypeScript. 
